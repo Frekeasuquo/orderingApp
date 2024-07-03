@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import {User} from "@/app/models/User"
 import { UserInfo } from "@/app/models/UserInfo";
 import * as bcrypt from "bcrypt";
-import NextAuth, {getServerSession} from "next-auth/next";
+import NextAuth, {getServerSession} from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
