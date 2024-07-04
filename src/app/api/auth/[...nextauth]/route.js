@@ -1,7 +1,6 @@
 import clientPromise from "@/libs/mongoConnet"
 import mongoose from "mongoose";
 import {User} from "@/app/models/User"
-import { UserInfo } from "@/app/models/UserInfo";
 import * as bcrypt from "bcrypt";
 import NextAuth, {getServerSession} from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials"
@@ -45,18 +44,6 @@ export const authOptions = {
     ]
 }
 
-export async function isAdmin() {
-    const session = await getServerSession(authOptions);
-    const userEmail = session?.user?.email;
-    if (!userEmail) {
-        return false;
-    }
-    const userInfo = await UserInfo.findOne({email:userEmail});
-    if (!userInfo) {
-        return false;
-    }
-    return userInfo.admin;
-}
 
 const handler = NextAuth(authOptions);
 
