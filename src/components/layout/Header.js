@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import { CartContext } from "../AppContext";
 import ShoppingCart from "../icons/ShoppingCart"
-import BarsTwo from "../icons/BarsTwo"
+import BarsTwo from "@/components/icons/barstwo"
 
 function AuthLinks({status, userName}) {
     if (status === 'authenticated') {
