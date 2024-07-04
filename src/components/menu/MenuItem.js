@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../AppContext";
 import toast from "react-hot-toast";
 import MenuItemTile from '@/components/menu/MenuItemTile'
-import FlyingButton from 'react-flying-item'
+//import FlyingButton from 'react-flying-item'
 
 export default function MenuItem(menuItem) {
     const {
@@ -105,18 +105,21 @@ export default function MenuItem(menuItem) {
                                     ))}
                                 </div>
                             )}
-                            <FlyingButton 
+                            {/* <FlyingButton 
                                 targetTop={'5%'} 
                                 targetLeft={'90%'}
                                 src={image}
+                            > */}
+                            <button
+                                className="primary sticky bottom-2"
+                                onClick={handleAddToCartButtonClick}
                             >
-                                <div
-                                    className="primary sticky bottom-2"
-                                    onClick={handleAddToCartButtonClick}
-                                >
+                                
                                     Add to cart ${selectedPrice}
-                                </div>
-                            </FlyingButton>
+                                
+                            </button>
+                                
+                            {/* </FlyingButton> */}
                             
                             <button 
                                 className="mt-2"
