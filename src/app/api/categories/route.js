@@ -1,4 +1,5 @@
-import {isAdmin} from "@/app/api/isAdmin/route";
+// import {isAdmin} from "@/app/api/isAdmin/route";
+import {isAdmin} from '@/utils/isAdmin/route'
 import mongoose from "mongoose";
 import { Category } from "../../models/Category";
 
