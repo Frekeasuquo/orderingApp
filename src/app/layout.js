@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             {children}
             <footer className="border-t p-8 text-center text-gray-500 mt-16">
               <div className="container mx-auto">
-                &copy; 2024 All right reserved
+                &copy; 2025 All right reserved
               </div>
             </footer>
           </AppProvider>
